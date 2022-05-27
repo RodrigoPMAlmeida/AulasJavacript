@@ -1,0 +1,88 @@
+@font-face {
+
+    font-family: 'Cyberpunk';
+    src: url(bBigerOver.otf) format('truetype');
+
+}
+
+html{
+
+    height: 100%;
+    background-color: aliceblue
+
+}
+
+body{
+
+    margin: 0;
+    height: 100%;
+    background-color: darkgreen;
+
+}
+
+#container{
+
+    height: 100%;
+    align-items: center;
+    background-color: darkturquoise;
+
+}
+
+#header{
+
+    margin: auto;
+    height: 25%;
+    width: 75%;
+    background-color: navy;
+    display: flex; 
+    justify-content: space-between;
+}
+
+#middle{
+
+    margin: auto;
+    height: 50%;
+    width: 100%;
+    background-color: maroon;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#footer{
+
+    margin: auto;
+    height: 25%;
+    width: 100%;
+    background-color: black;
+
+}
+
+.buttons{
+
+    background-color: white;
+    border:10%;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 5px solid midnightblue;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Cyberpunk';
+    margin-top: 25px;
+
+}
+
+.buttons:hover{
+
+    color:darkred;
+    transform: scale(1.2);
+    background-color: black;
+}
+
+#imagem{
+
+    
+
+}
