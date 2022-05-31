@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>nome</label>
+    <input type="text" id="nome">
+
+    <label>autor </label>
+    <input type="text" id="autor">
+
+    <label>ano</label>
+    <input type="text" id="ano">
+
+    <button onclick="saveData()">cadastrar</button>
+    <button onclick="buscarConteudo()">listar</button>
+</body>
+
+<script>
+    var info = {}
+    var arrayCadastro = []
+
+    function saveData() {
+        var arrayCadastro = JSON.parse(localStorage.getItem('dados'))
+        if(arrayCadastro == null){
+            var arrayCadastro = []
+            var info = {
+                nome: document.getElementById("nome").value,
+                autor: document.getElementById("autor").value,
+                ano: document.getElementById("ano").value
+            };
+            arrayCadastro.push(info);
+            //var infoJson = JSON.stringify(arraycadastro);
+            localStorage.setItem('dados', JSON.stringify(arrayCadastro));
+            alert("Cadastrado com sucesso!")
+        }
+        else{
+            var info = {
+                nome: document.getElementById("nome").value,
+                autor: document.getElementById("autor").value,
+                ano: document.getElementById("ano").value
+            };
+            arrayCadastro.push(info);
+
+            //var infoJson = JSON.stringify(arraycadastro);
+            localStorage.setItem("dados", JSON.stringify(arrayCadastro));
+            alert("Cadastrado com sucesso!")
+        }
+    }
+
+    function buscarConteudo() {
+        const arr = JSON.parse(localStorage.getItem('dados'));
+
+        if (arr != null) {
+            let tr = '';
+            arr.map(conteudo => {
+                tr += `
+			<tr>
+					<td>${conteudo.nome}</td>
+					<td>${conteudo.autor}</td>
+					<td>${conteudo.ano}</td>
+				</tr>`
+
+
+            })
+            tBody.innerHTML = tr;
+        }
+    }
+
+</script>
+
+</html>
