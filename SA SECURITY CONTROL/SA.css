@@ -19,10 +19,16 @@ body{
 
 }
 
-#header{
-
+#cima{
+    height: 20%;
     margin: auto;
-    height: 15%;
+    color: white;
+    background-color: black;
+}
+
+#header{
+    margin: auto;
+    color: white;
     background-color: black;
 
 }
@@ -38,7 +44,7 @@ body{
 #footer{
 
     margin: auto;
-    height: 15%;
+    height: 10%;
     background-color: darkgrey;
 }
 

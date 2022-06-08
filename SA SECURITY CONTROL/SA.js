@@ -61,6 +61,7 @@ function Login(){
             if(usuarioDigitado == cadastroUsuario[i].usuario && senhaDigitada == cadastroUsuario[i].senha){
                 alert(`Bem-vindo ${cadastroUsuario[i].usuario}`);
                 validacao = true
+                localStorage.setItem(`UsuarioAtual`, JSON.stringify(cadastroUsuario[i].usuario))
          }
      }
         if(validacao == true){
@@ -68,6 +69,7 @@ function Login(){
             IrParaIndex();
         }
         else{
+            alert('aqui');
             alert("Usuário ou senha não encontrado!")
         }
     
@@ -76,4 +78,16 @@ function Login(){
 
 function IrParaIndex(){
     window.location.href = "index.html";
+}
+
+function MostrarUsuarioAtual(){
+    document.getElementById("header").innerHTML = "Usuário atual: " + JSON.parse(localStorage.getItem('UsuarioAtual'))
+}
+
+function Deslogar(){
+    usuarioAtual = JSON.parse(localStorage.getItem('UsuarioAtual'))
+    usuarioAtual = null;
+    localStorage.setItem(`UsuarioAtual`, JSON.stringify(usuarioAtual))
+    alert("Deslogando...")
+
 }
