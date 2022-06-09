@@ -1,3 +1,17 @@
+@font-face {
+
+    font-family: 'letras';
+    src: url(Impacto\ Final!.ttf) format('opentype');
+
+}
+
+@font-face {
+
+    font-family: 'absolute';
+    src: url(aAbsoluteEmpire.ttf) format('opentype');
+
+}
+
 html{
 
     height: 100%;
@@ -6,7 +20,7 @@ html{
 
 body{
 
-    margin: 0;
+    margin: auto;
     height: 100%;
     background-color: rgb(0, 47, 68);
 
@@ -14,30 +28,32 @@ body{
 
 #container{
 
+    align-items: center;
     color: black;
     height: 100%;
 
 }
 
-#cima{
-    height: 20%;
-    margin: auto;
-    color: white;
-    background-color: black;
-}
 
 #header{
+
+   
     margin: auto;
+    height: 10%;
     color: white;
     background-color: black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
 
 }
 
 #middle{
     
     margin: auto;
-    height: 70%;
+    height: 80%;
     background-color: crimson;
+    
 
 }
 
@@ -59,5 +75,25 @@ body{
     color: rgb(0, 0, 0);
     font-size: 15px;
     font-weight: bolder;
-    font-family: 'letras';
+   
+}
+
+
+h1{
+
+    font-size: 35px;
+    font-family: 'absolute';
+}
+
+
+
+#imagem{
+
+    margin: auto;
+    height: 80px;
+}
+
+#cima{
+
+    color: aliceblue;
 }

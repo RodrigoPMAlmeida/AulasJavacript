@@ -19,6 +19,8 @@ function Cadastro(){
             cadastroUsuario.push(Conta)
             localStorage.setItem(`Logins`, JSON.stringify(cadastroUsuario))
             alert("e-mail e senha cadastrados!!")
+
+            IrParaLogin()
 }  
         else{
             alert("Insira todos os dados!");
@@ -36,6 +38,8 @@ function Cadastro(){
                     cadastroUsuario.push(Conta)
                     localStorage.setItem(`Logins`, JSON.stringify(cadastroUsuario))
                     alert("Usuário e senha cadastrados!!")
+
+                    IrParaLogin()
         }  
         
         else{
@@ -43,6 +47,8 @@ function Cadastro(){
 
         }
     }
+
+
 }
 
 function Login(){
@@ -78,6 +84,11 @@ function Login(){
 
 function IrParaIndex(){
     window.location.href = "index.html";
+}
+
+function IrParaLogin(){
+
+    window,location.href = "Tela_de_Login.html";
 }
 
 function MostrarUsuarioAtual(){
