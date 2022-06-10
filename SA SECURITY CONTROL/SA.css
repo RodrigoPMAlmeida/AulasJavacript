@@ -42,8 +42,7 @@ body{
     height: 10%;
     color: white;
     background-color: black;
-    display: block;
-    justify-content: flex-start;
+    
 
 }
 
@@ -107,4 +106,24 @@ h1{
 #cabeca{
     font-size: 50px;
     font-family: 'letras';
+}
+
+#submenu{
+
+    justify-content: left;
+
+}
+
+#titulo{
+
+    margin: auto;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#texto{
+
+    display: block;
+
 }
