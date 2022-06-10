@@ -42,9 +42,8 @@ body{
     height: 10%;
     color: white;
     background-color: black;
-    display: flex;
-    justify-content: space-between;
-    font-size: 50px;
+    display: block;
+    justify-content: flex-start;
 
 }
 
@@ -96,4 +95,15 @@ h1{
 #cima{
 
     color: aliceblue;
+}
+
+#usuarioAtual{
+
+    font-size: 30px;
+    font-family: 'letras';
+}
+
+#cabeca{
+    font-size: 50px;
+    font-family: 'letras';
 }
