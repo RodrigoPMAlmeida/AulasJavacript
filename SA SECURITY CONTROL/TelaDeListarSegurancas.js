@@ -3,6 +3,13 @@ let Conta = {}
 let Seguranca = {}
 let listaSeguranca = []
 var posicaoAtual = ""
+var segurancaAtual
+
+
+function MostrarUsuarioAtual(){
+    document.getElementById("header").innerHTML = "<label id='usuarioAtual'>Usuario atual: " + JSON.parse(localStorage.getItem('UsuarioAtual')) +'</label>'
+    //+'<br><a id="deslogar" onclick="Deslogar()" href="Tela_de_Login.html">Deslogar</a>'
+}
 
 
 function ListarSeguranca(){
@@ -11,15 +18,21 @@ function ListarSeguranca(){
        
     for(var i=0; i<listaSeguranca.length; i++){
 
-        posicaoAtual += "<a href='Tela_De_Informacoes_Seguranca.html'onclick='SalvarSegurancaAtual() id='"+i+"'>" + listaSeguranca[i].nome + "</a><br>"
+        posicaoAtual += "<a href='Tela_De_Informacoes_Seguranca.html'onclick='SalvarSegurancaAtual("+i+")'>" + listaSeguranca[i].nome + "</a><br>"
         document.getElementById('texto').innerHTML = posicaoAtual
 
     }
 
 }
 
-function SalvarSegurancaAtual(){
+function SalvarSegurancaAtual(i){
 
+    segurancaAtual = null
+    
+    listaSeguranca = JSON.parse(localStorage.getItem('Segurancas'))
 
+    segurancaAtual = listaSeguranca[i]
+
+    localStorage.setItem(`SegurancaAtual`, JSON.stringify(segurancaAtual))
 
 }
