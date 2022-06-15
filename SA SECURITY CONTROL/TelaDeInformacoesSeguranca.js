@@ -9,3 +9,7 @@ function MostrarSegurancaAtual(){
 
     document.getElementById('texto').innerHTML = "Nome: "+segurancaAtual.nome + "<br>" +"CPF: "+ segurancaAtual.cpf + "<br>" +"Endereço: "+segurancaAtual.endereco + "<br>" + "Data de nascimento: "+segurancaAtual.nascimento + "<br>" + "Telefone: "+segurancaAtual.telefone + "<br>"
 }
+
+function IrParaEdicao(){
+    window.location.href = "Tela_De_Edicao_Seguranca.html";
+}

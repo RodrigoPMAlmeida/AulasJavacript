@@ -36,3 +36,4 @@ function SalvarSegurancaAtual(i){
     localStorage.setItem(`SegurancaAtual`, JSON.stringify(segurancaAtual))
 
 }
+
