@@ -19,22 +19,51 @@ function cadastrarSeguranca(){
         listaSeguranca = []
         Seguranca = {
 
-            nome: document.getElementById("nomeSegurança1").value,
-            cpf: document.getElementById("cpfSegurança1").value,
-            telefone: document.getElementById("telefoneSegurança1").value,
-            idade: document.getElementById("idadeSegurança1").value,
+            nome: document.getElementById("nome").value,
+            cpf: document.getElementById("cpf").value,
+            telefone: document.getElementById("telefone").value,
+            nascimento: document.getElementById("nascimento").value,
+            endereco: document.getElementById("endereco").value,
 
         }
 
-    if(Seguranca.nome != "" && Seguranca.cpf != "" && Seguranca.telefone!= "" && Seguranca.idade != "" )
+    if(Seguranca.nome != "" && Seguranca.cpf != "" && Seguranca.telefone!= "" && Seguranca.nascimento != "" && Seguranca.endereco != "" ){
                    
             listaSeguranca.push(Seguranca)
-            localStorage.setItem(`SegurancasADM`, JSON.stringify(listaSeguranca))
-
-        
+            localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
+            alert("Deu certoooo!! ")
     }
+            else{
 
+                alert("preencha todos os dados")
+            }
+    
+    }
+    else{
+        
+        Seguranca = {
+
+            nome: document.getElementById("nome").value,
+            cpf: document.getElementById("cpf").value,
+            telefone: document.getElementById("telefone").value,
+            nascimento: document.getElementById("nascimento").value,
+            endereco: document.getElementById("endereco").value,
+
+        }
+
+        if(Seguranca.nome != "" && Seguranca.cpf != "" && Seguranca.telefone!= "" && Seguranca.nascimento != "" && Seguranca.endereco != "" ){   
+            listaSeguranca.push(Seguranca)
+            localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
+            alert("Deu certoooo!! ")
+        }
+            else{
+                alert("preencha todos os dados")
+            }
+    }
+    
 }
+
+
 
 function Deslogar(){
     usuarioAtual = JSON.parse(localStorage.getItem('UsuarioAtual'))
