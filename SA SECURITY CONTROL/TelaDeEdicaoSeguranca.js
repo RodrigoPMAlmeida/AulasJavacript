@@ -27,16 +27,16 @@ function EditarSeguranca(){
     resultado = confirm("Confirmar edição?")
 
     if(resultado == true){
-    listaSeguranca[posicaoAtual].nome = document.getElementById("nome").value
-    listaSeguranca[posicaoAtual].cpf = document.getElementById("cpf").value
-    listaSeguranca[posicaoAtual].telefone = document.getElementById("telefone").value
-    listaSeguranca[posicaoAtual].endereco = document.getElementById("endereco").value
-    listaSeguranca[posicaoAtual].nascimento = document.getElementById("nascimento").value
+        listaSeguranca[posicaoAtual].nome = document.getElementById("nome").value
+        listaSeguranca[posicaoAtual].cpf = document.getElementById("cpf").value
+        listaSeguranca[posicaoAtual].telefone = document.getElementById("telefone").value
+        listaSeguranca[posicaoAtual].endereco = document.getElementById("endereco").value
+        listaSeguranca[posicaoAtual].nascimento = document.getElementById("nascimento").value
 
-    localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
-    SalvarSegurancaAtual(posicaoAtual)
-    alert("Segurança Alterado!")
-    window,location.href = "Tela_de_Informacoes_Seguranca.html";
+        localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
+        SalvarSegurancaAtual(posicaoAtual)
+        alert("Segurança Alterado!")
+        window,location.href = "Tela_de_Informacoes_Seguranca.html";
     }
 
 }
