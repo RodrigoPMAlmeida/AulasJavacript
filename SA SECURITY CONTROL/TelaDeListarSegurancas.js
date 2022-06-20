@@ -4,6 +4,7 @@ let Seguranca = {}
 let listaSeguranca = []
 var posicaoAtual = ""
 var segurancaAtual
+var idSeguranca
 
 
 function MostrarUsuarioAtual(){
