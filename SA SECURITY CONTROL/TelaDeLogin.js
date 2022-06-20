@@ -14,19 +14,22 @@ function Login(){
     
     else{
         for(var i = 0; cadastroUsuario[i]; i++){
-            if(usuarioDigitado == cadastroUsuario[i].usuario && senhaDigitada == cadastroUsuario[i].senha){
+            if(usuarioDigitado == cadastroUsuario[i].usuario && senhaDigitada == cadastroUsuario[i].senha)
+            {
                 alert(`Bem-vindo ${cadastroUsuario[i].usuario}`);
                 validacao = true
                 localStorage.setItem(`UsuarioAtual`, JSON.stringify(cadastroUsuario[i].usuario))
-         }
-     }
-        if(validacao == true){
+            }
+        }
+        if(validacao == true)
+        {
             alert("Usuário logado com sucesso!");
             IrParaIndex();
         }
-        else{
-            alert('aqui');
-            alert("Usuário ou senha não encontrado!")
+        else
+        {
+           alert('aqui');
+           alert("Usuário ou senha não encontrado!")
         }
     
     }
