@@ -28,6 +28,10 @@ function ListarSeguranca(){
 function SalvarSegurancaAtual(i){
 
     segurancaAtual = null
+
+    idSeguranca = i
+
+    localStorage.setItem(`PosicaoSeguranca`, JSON.stringify(idSeguranca))
     
     listaSeguranca = JSON.parse(localStorage.getItem('Segurancas'))
 
