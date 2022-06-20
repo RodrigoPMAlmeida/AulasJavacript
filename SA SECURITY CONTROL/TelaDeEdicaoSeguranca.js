@@ -24,6 +24,9 @@ function EditarSeguranca(){
     listaSeguranca = JSON.parse(localStorage.getItem('Segurancas'))
     posicaoAtual = JSON.parse(localStorage.getItem('PosicaoSeguranca'))
 
+    resultado = confirm("Confirmar edição?")
+
+    if(resultado == true){
     listaSeguranca[posicaoAtual].nome = document.getElementById("nome").value
     listaSeguranca[posicaoAtual].cpf = document.getElementById("cpf").value
     listaSeguranca[posicaoAtual].telefone = document.getElementById("telefone").value
@@ -32,10 +35,9 @@ function EditarSeguranca(){
 
     localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
     SalvarSegurancaAtual(posicaoAtual)
-
-    alert("Segurança alterado!")
-
+    alert("Segurança Alterado!")
     window,location.href = "Tela_de_Informacoes_Seguranca.html";
+    }
 
 }
 
