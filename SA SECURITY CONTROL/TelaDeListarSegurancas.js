@@ -2,7 +2,7 @@ let cadastroUsuario = []
 let Conta = {}
 let Seguranca = {}
 let listaSeguranca = []
-var posicaoAtual = ""
+var nomes = ""
 var segurancaAtual
 var idSeguranca
 
@@ -19,14 +19,16 @@ function ListarSeguranca(){
        
     for(var i=0; i<listaSeguranca.length; i++){
 
-        posicaoAtual += "<a href='Tela_De_Informacoes_Seguranca.html'onclick='SalvarSegurancaAtual("+i+")'>" + listaSeguranca[i].nome + "</a><br>"
-        document.getElementById('texto').innerHTML = posicaoAtual
+        nomes += "<a onclick='SalvarSegurancaAtual("+i+"),MostrarSegurancaAtual()' id='itemLista'>" + listaSeguranca[i].nome + "</a><br>"
+
+
+        document.getElementById('listaDados').innerHTML = nomes
 
     }
 
 }
 
-function SalvarSegurancaAtual(i){
+function SalvarSegurancaAtual(i){   
 
     segurancaAtual = null
 
@@ -42,3 +44,21 @@ function SalvarSegurancaAtual(i){
 
 }
 
+function MostrarSegurancaAtual(){
+    segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
+
+    document.getElementById('seguranca').innerHTML = "Nome: "+segurancaAtual.nome + "<br>" +"CPF: "+ segurancaAtual.cpf + "<br>" +"Endereço: "+segurancaAtual.endereco + "<br>" + "Data de nascimento: "+segurancaAtual.nascimento + "<br>" + "Telefone: "+segurancaAtual.telefone + "<br>"
+    document.getElementById('botao').innerHTML = "<button onclick='IrParaEdicao()'>Editar</a><br> <button onclick=''>Excluir</a>"
+
+}
+
+
+
+function IrParaEdicao(){
+    window.location.href = "Tela_De_Edicao_Seguranca.html";
+}
+
+function MostrarUsuarioAtual(){
+    document.getElementById("header").innerHTML = "<label id='usuarioAtual'>Usuario atual: " + JSON.parse(localStorage.getItem('UsuarioAtual')) +'</label>'
+    //+'<br><a id="deslogar" onclick="Deslogar()" href="Tela_de_Login.html">Deslogar</a>'
+}
