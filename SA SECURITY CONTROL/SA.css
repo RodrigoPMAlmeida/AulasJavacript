@@ -140,7 +140,7 @@ h1{
     
 }
 
-#itemLista:hover{
+#Seguranca:hover{
     color:black;
 }
 
@@ -151,7 +151,7 @@ h1{
 }
 
 #lista{
-    background-color: antiquewhite;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -178,6 +178,6 @@ h1{
 #edicaoDentro{
     padding: 25px;
     margin-right: 25px;
-    background-color: antiquewhite;
+    background-color: white;
 
 }

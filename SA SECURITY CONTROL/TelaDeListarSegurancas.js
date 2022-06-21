@@ -20,8 +20,8 @@ function ListarSeguranca(){
        
     for(var i=0; i<listaSeguranca.length; i++){
 
-        nomes += "<a onclick='SalvarSegurancaAtual("+i+"),MostrarSegurancaAtual()' id='nomeSeguranca'>" + listaSeguranca[i].nome + "</a><br>"
-        cpfs += "<a onclick='SalvarSegurancaAtual("+i+"),MostrarSegurancaAtual()' id='cpfSeguranca'>" + listaSeguranca[i].cpf + "</a><br>"
+        nomes += "<a onclick='SalvarSegurancaAtual("+i+"),MostrarSegurancaAtual()' id='Seguranca'>" + listaSeguranca[i].nome + "</a><br>"
+        cpfs += "<a onclick='SalvarSegurancaAtual("+i+"),MostrarSegurancaAtual()' id='Seguranca'>" + listaSeguranca[i].cpf + "</a><br>"
 
         document.getElementById('listaNomes').innerHTML = nomes
         document.getElementById('listaCPF').innerHTML = cpfs
