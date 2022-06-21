@@ -130,10 +130,10 @@ h1{
 
 #meio{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-#listaDados{
+#listaNomes{
     color: blue;
     text-decoration: underline;
     cursor: pointer;
@@ -145,5 +145,39 @@ h1{
 }
 
 #botao{
-    display: grid;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#lista{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 25px;
+    margin-left: 25px;
+}
+
+#listaCPF{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+#listaEsquerda{
+    padding-right: 10px;
+    border-right: 2px solid black;
+}
+
+#listaDireita{
+    padding-left: 10px;
+}
+
+#edicaoDentro{
+    padding: 25px;
+    margin-right: 25px;
+    background-color: antiquewhite;
+
 }
