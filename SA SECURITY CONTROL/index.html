@@ -43,22 +43,7 @@
         </div>
 
 </div>
-<script >
-  var url = "http://192.168.45.29"
-  
-setInterval(function ( ) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-     // alert("ok")
-      if (this.readyState == 4 && this.status == 200) {	
-        document.getElementById("tag").innerHTML = this.responseText;
-       // alert("ok")
-      }
-    };
-    xhttp.open("GET", url+"/rfid", true);    
-    xhttp.send();
-  }, 3000 ) ;
-</script>
+<script src="index.js"></script>
 
 </body>
 </html>

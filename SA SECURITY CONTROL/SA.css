@@ -110,7 +110,11 @@ h1{
 
 #submenu{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    margin-left: 35%;
+    margin-right: 30%;
+    font-family: letras;
+    font-size: 20px;
 
 }
 
@@ -184,7 +188,8 @@ h1{
 
 #tituloLista{
     margin-left: 25px;
-
+    font-size: 33px;
+    font-family: 'letras';
 }
 
 #sair{
@@ -201,3 +206,14 @@ h1{
     justify-content: center;
 }
     
+#seguranca{
+    background-color: white;
+}
+
+button{
+
+   border-style: groove;
+   border-radius: 5px;
+   margin-top: 10px;
+   
+}
