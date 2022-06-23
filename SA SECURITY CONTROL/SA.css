@@ -4,14 +4,14 @@
     src: url(Impacto\ Final!.ttf) format('opentype');
 
 }
-
+/*
 @font-face {
 
     font-family: 'absolute';
     src: url(aAbsoluteEmpire.ttf) format('opentype');
 
 }
-
+*/
 html{
 
     height: 100%;
@@ -36,31 +36,21 @@ body{
 
 
 #header{
-
    
     margin: auto;
     height: 10%;
     color: white;
     background-color: black;
     
-
 }
 
 #middle{
     
     margin: auto;
-    height: 80%;
+    height: 90%;
     background-color: crimson;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
-
-}
-
-#footer{
-
-    margin: auto;
-    height: 10%;
-    background-color: darkgrey;
 }
 
 .buttons{
@@ -109,10 +99,9 @@ h1{
 }
 
 #submenu{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 35%;
-    margin-right: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr1fr; 
+    
     font-family: letras;
     font-size: 20px;
 

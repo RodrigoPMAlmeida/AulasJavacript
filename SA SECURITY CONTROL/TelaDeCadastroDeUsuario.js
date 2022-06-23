@@ -3,24 +3,34 @@ let Conta = {}
 
 function Cadastro(){
 
-    cadastroUsuario = JSON.parse(localStorage.getItem(`Logins`))    
+    cadastroUsuario = JSON.parse(localStorage.getItem(`Logins`))   
+    confirmarSenha = document.getElementById("confirmarSenha").value 
    
     if(cadastroUsuario == null){
         
         cadastroUsuario = []
+        
         Conta = {
 
             usuario: document.getElementById("usuario").value,
+            sobrenome: document.getElementById("sobrenome").value,
+            nascimento: document.getElementById("nascimento").value,
+            cpf: document.getElementById("cpf").value,
             senha:  document.getElementById("senha").value
 
         }
-        if(Conta.usuario != "" && Conta.senha != "")
-{        
+        if(Conta.usuario != "" && Conta.sobrenome != "" && Conta.cpf != "" && Conta.nascimento != "" && Conta.senha != "" )
+        {        
+            if(Conta.senha != confirmarSenha){
+                alert("Erro na confirmação da senha")
+            }
+            else{
             cadastroUsuario.push(Conta)
             localStorage.setItem(`Logins`, JSON.stringify(cadastroUsuario))
-            alert("e-mail e senha cadastrados!!")
+            alert("Usuário cadastrado!")
 
             IrParaLogin()
+            }
 }  
         else{
             alert("Insira todos os dados!");
@@ -29,17 +39,24 @@ function Cadastro(){
     else{
         Conta = {
             usuario: document.getElementById("usuario").value,
+            sobrenome: document.getElementById("sobrenome").value,
+            nascimento: document.getElementById("nascimento").value,
+            cpf: document.getElementById("cpf").value,
             senha:  document.getElementById("senha").value
         }
 
         
-        if(Conta.usuario != "" && Conta.senha != ""){
-               
+        if(Conta.usuario != "" && Conta.sobrenome != "" && Conta.cpf != "" && Conta.nascimento != "" && Conta.senha != "" ){
+            if(Conta.senha != confirmarSenha){
+                alert("Erro na confirmação da senha")
+            }
+            else{
                     cadastroUsuario.push(Conta)
                     localStorage.setItem(`Logins`, JSON.stringify(cadastroUsuario))
                     alert("Usuário e senha cadastrados!!")
 
                     IrParaLogin()
+            }
         }  
         
         else{
