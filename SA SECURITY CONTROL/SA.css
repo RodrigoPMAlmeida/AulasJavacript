@@ -109,8 +109,8 @@ h1{
 }
 
 #submenu{
-
-    justify-content: left;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -181,3 +181,23 @@ h1{
     background-color: white;
 
 }
+
+#tituloLista{
+    margin-left: 25px;
+
+}
+
+#sair{
+    margin-left: 5px;
+}
+
+#voltar{
+    margin-left: 5px;
+}
+
+#tag{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+    

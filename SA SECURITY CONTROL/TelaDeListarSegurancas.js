@@ -50,7 +50,7 @@ function MostrarSegurancaAtual(){
     segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
 
     document.getElementById('seguranca').innerHTML = "Nome: "+segurancaAtual.nome + "<br>" +"CPF: "+ segurancaAtual.cpf + "<br>" +"Endereço: "+segurancaAtual.endereco + "<br>" + "Data de nascimento: "+segurancaAtual.nascimento + "<br>" + "Telefone: "+segurancaAtual.telefone + "<br>"
-    document.getElementById('botao').innerHTML = `<button onclick='MostrarEdicao()'>Editar</a> <button onclick='ExcluirSeguranca(${segurancaAtual.cpf})'>Excluir</a>`
+    document.getElementById('botao').innerHTML = "<button onclick='MostrarEdicao()'>Editar</a> <button onclick=''>Excluir</a>"
 
     document.getElementById('edicaoDentro').innerHTML = ""
 }
@@ -63,23 +63,6 @@ function MostrarEdicao(){
 
 }
 
-function ExcluirSeguranca(cpf){
-    const listaSeguranca = JSON.parse(localStorage.getItem('Segurancas'))
-    const deletarSeguranca = listaSeguranca.map(seguranca => {
-        if(seguranca.cpf === cpf.toString()){
-           return null
-        }else{
-           return seguranca
-        }
-    })
-
-    const listaFiltrada = deletarSeguranca.filter(function (elem) {
-        return elem != null;
-    });
-
-    localStorage.setItem(`Segurancas`, JSON.stringify(listaFiltrada))
-    document.location.reload()
-}
 
 function EditarSeguranca(){
     //window.location.href = "Tela_De_Edicao_Seguranca.html";
