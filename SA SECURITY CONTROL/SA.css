@@ -40,7 +40,8 @@ body{
     margin: auto;
     height: 10%;
     background-color: black;
-    
+    display: flex;
+    justify-content: space-between;
     
 }
 
@@ -52,11 +53,32 @@ body{
 
 
 }
+#middleLogin{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+    height: 50%;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    
+}
+
+#baixoMiddle{
+
+    margin: auto;
+    height: 25%;
+    background-color: red;
+
+
+}
 #middle{
     
     margin: auto;
-    height: 40%;
-    background-color: white;
+    height: 90%;
+    background-color: red;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     
@@ -68,15 +90,11 @@ body{
     height: 25%;
     background-color: red;
 
-
-
 }
 .buttons{
 
     background-color: azure;
     border: 0;
-    width:10%;
-    height: 10%;
     border-radius: 5px 5px 5px 5px;
     border: 2px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
@@ -223,23 +241,35 @@ button{
    border-radius: 5px;
    margin-top: 10px;
    
+   
 }
 
-#logotipo{
+#logotipoimagem{
 
-    width: 15%;
-    position: relative;
-    right: 350px;
-    top: 60px;
-    
-    
-    
+    height: 100%;  
 }
 
-#logoRedusida{
+#logoReduzida{
 
     width: 3%;
     position: relative;
     left: 1860px;
     bottom: 58px;
+}
+
+
+
+#janelaLogin{
+
+    display: block;
+    margin: auto;
+    
+}
+
+#camposLogin{
+    border-color: black;
+    border-style: groove;
+    padding: 25px;
+    border-radius: 15px;
+    border-width: 1px;
 }
