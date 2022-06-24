@@ -4,6 +4,7 @@ let Seguranca = {}
 let listaSeguranca = []
 var posicaoAtual
 var segurancaAtual
+var lista = ""
 
 
 function MostrarUsuarioAtual(){
@@ -27,16 +28,30 @@ function EditarCadastro(){
     resultado = confirm("Confirmar edição?")
 
     if(resultado == true){
-        usuarios[posicaoLogin].nome = document.getElementById("nome").value
+        usuarios[posicaoLogin].usuario = document.getElementById("nome").value
         usuarios[posicaoLogin].sobrenome = document.getElementById("sobrenome").value
         usuarios[posicaoLogin].nascimento = document.getElementById("nascimento").value
         usuarios[posicaoLogin].cpf = document.getElementById("cpf").value
         usuarios[posicaoLogin].senha = document.getElementById("senha").value
 
         localStorage.setItem(`Logins`, JSON.stringify(usuarios))
-        alert("Login Alterado!")
+        localStorage.setItem(`UsuarioAtual`, JSON.stringify(usuarios[posicaoLogin]))
+        
         window,location.href = "Tela_de_Alterar_Cadastro.html";
     }
+}
+
+//Função para mostrar logins, para teste
+function listarCadastros(){
+    usuarios = JSON.parse(localStorage.getItem('Logins'))
+
+    for(var i = 0; i<usuarios.length; i++){
+        lista = lista + Object.values(usuarios[i])
+    }
+    alert(lista)
+
+    lista = ''
+    
 }
 
 function Deslogar(){
