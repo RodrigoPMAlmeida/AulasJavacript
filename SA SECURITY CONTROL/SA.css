@@ -180,6 +180,7 @@ h1{
 }
 
 #lista{
+    
     background-color: white;
     display: flex;
     justify-content: space-between;

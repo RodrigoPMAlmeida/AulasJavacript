@@ -31,6 +31,8 @@ function ListarSeguranca(){
 
 }
 
+
+
 function SalvarSegurancaAtual(i){   
 
     segurancaAtual = null
@@ -51,9 +53,27 @@ function MostrarSegurancaAtual(){
     segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
 
     document.getElementById('seguranca').innerHTML = "Nome: "+segurancaAtual.nome + "<br>" +"CPF: "+ segurancaAtual.cpf + "<br>" +"Endereço: "+segurancaAtual.endereco + "<br>" + "Data de nascimento: "+segurancaAtual.nascimento + "<br>" + "Telefone: "+segurancaAtual.telefone + "<br>"
-    document.getElementById('botao').innerHTML = `<button onclick='MostrarEdicao()'>Editar</a> <button onclick=''>Excluir</a>`
+    document.getElementById('botao').innerHTML = `<button onclick='MostrarEdicao()'>Editar</a> <button onclick='ExcluirSeguranca()'>Excluir</a>`
 
     document.getElementById('edicaoDentro').innerHTML = ""
+}
+
+function ExcluirSeguranca(){
+
+    posicaoSeguranca = JSON.parse(localStorage.getItem('PosicaoSeguranca'))
+    listaSeguranca = JSON.parse(localStorage.getItem('Segurancas'))
+
+    confirmacao = confirm("Confimar exclusão")
+
+    if(confirmacao == true){
+
+    listaSeguranca[posicaoSeguranca] = null
+
+    localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
+    alert("Segurança deletado!")
+    window,location.href = "Tela_de_Listar_Segurancas.html";
+    }
+
 }
 
 function MostrarEdicao(){
