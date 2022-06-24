@@ -18,12 +18,14 @@ function Login(){
             {
                 alert(`Bem-vindo ${cadastroUsuario[i].usuario}`);
                 validacao = true
-                localStorage.setItem(`UsuarioAtual`, JSON.stringify(cadastroUsuario[i].usuario))
+                localStorage.setItem(`UsuarioAtual`, JSON.stringify(cadastroUsuario[i]))
+                localStorage.setItem(`PosicaoLogin`, JSON.stringify(i))
             }
         }
         if(validacao == true)
         {
             alert("Usuário logado com sucesso!");
+
             IrParaIndex();
         }
         else
