@@ -80,7 +80,7 @@ function MostrarEdicao(){
     segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
 
 
-    document.getElementById('edicaoDentro').innerHTML = "<center><div id='tituloEdicao'>Edição de colaborador</div></center><center><br><br>Nome: <input type='text' id='nome' value='"+segurancaAtual.nome+"'placeholder='Nome'><br><br>CPF: <input type='text' id='cpf' value='"+segurancaAtual.cpf+"' placeholder='CPF'> <br><br>Telefone: <input type='tel' id='telefone' value='"+segurancaAtual.telefone+"' placeholder='Telefone'><br><br>Data de nascimento:<input type='date' id='nascimento' value='"+segurancaAtual.nascimento+"'placeholder='Data de nascimento'><br><br>Endereço: <input type='text' id='endereco' value='"+segurancaAtual.endereco+"'placeholder='Endereço'><br><br><button id='botaoEditar' onclick='EditarSeguranca()'>Alterar</button></center>"
+    document.getElementById('edicaoDentro').innerHTML = "<center><div id='tituloEdicao'>Edição de colaborador</div></center><center><br><br>Nome: <input type='text' id='nome' value='"+segurancaAtual.nome+"'placeholder='Nome'><br><br>CPF: <input type='text' id='cpf' value='"+segurancaAtual.cpf+"' placeholder='CPF'> <br><br>Telefone: <input type='tel' id='telefone' value='"+segurancaAtual.telefone+"' placeholder='Telefone'><br><br>Data de nascimento:<input type='date' id='nascimento' value='"+segurancaAtual.nascimento+"'placeholder='Data de nascimento'><br><br>Endereço: <input type='text' id='endereco' value='"+segurancaAtual.endereco+"'placeholder='Endereço'><br><br>Tag: <input type='text' id='tagSeguranca' value='"+segurancaAtual.tag+"'placeholder='Tag'><br><br><button id='botaoEditar' onclick='EditarSeguranca()'>Alterar</button></center>"
 
 }
 

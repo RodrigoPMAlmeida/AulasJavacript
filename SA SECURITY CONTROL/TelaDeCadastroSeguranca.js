@@ -25,6 +25,7 @@ function cadastrarSeguranca(){
             telefone: document.getElementById("telefone").value,
             nascimento: document.getElementById("nascimento").value,
             endereco: document.getElementById("endereco").value,
+            tag: document.getElementById("tagSeguranca").value
 
         }
 

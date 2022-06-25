@@ -44,6 +44,11 @@ void setup() {
  
   SPI.begin();
   mfrc522.PCD_Init();   // Inicia MFRC522
+
+ // Configura o endereço IP estático
+  if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
+    Serial.println("Falha ao configurar em modo Station (STA)");
+  }
  
   // Conectando ao Wi-Fi
   WiFi.begin(ssid, password);
@@ -57,7 +62,7 @@ void setup() {
  
   server.on("/rfid", HTTP_GET, [](AsyncWebServerRequest * request) {
     request->send_P(200, "text/plain", rfid_card.c_str());
-    rfid_card = "passe outra tag!";
+    rfid_card = "";
   }); 
 
    // Adiciona no cabeçalho para evitar erro de acesso do CORS
