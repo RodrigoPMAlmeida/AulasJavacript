@@ -67,7 +67,9 @@ function ExcluirSeguranca(){
 
     if(confirmacao == true){
 
-    listaSeguranca[posicaoSeguranca] = null
+    //listaSeguranca[posicaoSeguranca] = null
+
+    listaSeguranca.splice(posicaoSeguranca,1)
 
     localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
     alert("Segurança deletado!")
