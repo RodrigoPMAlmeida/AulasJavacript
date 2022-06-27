@@ -40,3 +40,7 @@ function Login(){
 function IrParaIndex(){
     window.location.href = "index.html";
 }
+
+function IrParaCadastro(){
+    window.location.href = "Tela_de_cadastro_de_usuário.html";
+}

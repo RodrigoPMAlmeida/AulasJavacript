@@ -274,3 +274,20 @@ button{
     border-radius: 15px;
     border-width: 1px;
 }
+
+#menuHeader{
+
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'letras';
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 25%;
+
+}
+
+#menuHeader:hover{
+    color:blue;
+}
+
