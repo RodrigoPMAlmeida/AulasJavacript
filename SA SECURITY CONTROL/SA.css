@@ -134,19 +134,17 @@ h1{
 
 #submenu{
     display: flex-start;
-    width: 20px;
     color: white;
     font-family: letras;
     font-size: 30px;
-    cursor: pointer;
 
 }
 
 #submenuItem{
-
+    cursor: pointer;
 }
 
-#submenu:hover{
+#submenuItem:hover{
     color:red;
 }
 

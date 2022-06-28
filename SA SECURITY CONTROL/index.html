@@ -13,16 +13,16 @@
 <div id="container">
 
 
-        <div id="header">
+    <div id="header">
 
-            <div id="headerEsquerda">
+        <div id="headerEsquerda">
             <label id='usuarioAtual'></label>
-
-            <a onclick="Deslogar()" id="submenu">Sair</a>
+            
+            <div id="submenu">
+            <a onclick="Deslogar()" id="submenuItem">Sair</a>
             </div>
-                    
         </div>
-       
+    </div>
    
 
 
@@ -36,9 +36,9 @@
         <center>
         <div id="submenuLista">
             
-            <a onclick="IrParaCadastroSeguranca()"" id="gridItem">Cadastrar novo segurança</a>
-            <a id="gridItem">Listar Seguranças</a>
-            <a id="gridItem">Alterar Cadastro</a>
+            <a onclick="IrParaCadastroSeguranca()" id="gridItem">Cadastrar novo segurança</a>
+            <a onclick="IrParaListaSeguranca()" id="gridItem">Listar Seguranças</a>
+            <a onclick="IrParaAlterarCadastro()" id="gridItem">Alterar Cadastro</a>
             <a id="gridItem">Desempenho</a>
         </div>
         </center>

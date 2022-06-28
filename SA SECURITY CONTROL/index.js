@@ -104,3 +104,16 @@ function salvarPonto(tag){
   function IrParaCadastroSeguranca(){
     window.location.href = "Tela_de_cadastro_de_segurança.html";
   }
+
+  function IrParaListaSeguranca(){
+    window.location.href = "Tela_De_Listar_Segurancas.html";
+  }
+
+
+  function IrParaAlterarCadastro(){
+    window.location.href = "Tela_de_Alterar_Cadastro.html";
+  }
+
+  function IrParaCadastroSeguranca(){
+    window.location.href = "Tela_de_cadastro_de_segurança.html";
+  }

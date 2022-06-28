@@ -73,3 +73,7 @@ function Deslogar(){
     alert("Deslogando...")
     window.location.href = "Tela_de_Login.html";
 }
+
+function VoltarIndex(){
+    window.location.href = "index.html";
+}

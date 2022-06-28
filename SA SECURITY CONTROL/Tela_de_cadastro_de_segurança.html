@@ -10,13 +10,15 @@
 </head>
 <body onload="MostrarUsuarioAtual()">
 
-<div id="container">
     <div id="header">
 
         <div id="headerEsquerda">
         <label id='usuarioAtual'></label>
 
-        <a onclick="Deslogar()" id="submenu">Sair</a>
+        <div id="submenu">
+        <a onclick="Deslogar()" id="submenuItem">Sair</a>
+        <a onclick="VoltarIndex()" id="submenuItem">Voltar</a>
+        </div>
         </div>
                 
     </div>
