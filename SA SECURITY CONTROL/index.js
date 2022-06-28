@@ -117,3 +117,8 @@ function salvarPonto(tag){
   function IrParaCadastroSeguranca(){
     window.location.href = "Tela_de_cadastro_de_segurança.html";
   }
+
+  function irParaDesempenho(){
+    
+    window.location.href = "Tela_De_Desempenho_Segurancas.html";
+}

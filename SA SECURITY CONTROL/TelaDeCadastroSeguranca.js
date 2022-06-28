@@ -77,3 +77,4 @@ function Deslogar(){
 function VoltarIndex(){
     window.location.href = "index.html";
 }
+
