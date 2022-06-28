@@ -11,12 +11,13 @@ function Deslogar(){
     usuarioAtual = null;
     localStorage.setItem(`UsuarioAtual`, JSON.stringify(usuarioAtual))
     alert("Deslogando...")
+    window.location.href = "Tela_de_Login.html";
 
 }
 
 function MostrarUsuarioAtual(){
   usuarioAtual = JSON.parse(localStorage.getItem('UsuarioAtual'))
-  document.getElementById("header").innerHTML = "<label id='usuarioAtual'>Usuario atual: " + usuarioAtual.usuario +'</label>'
+  document.getElementById("usuarioAtual").innerHTML = "Usuario Atual: " + usuarioAtual.usuario
   //+'<br><a id="deslogar" onclick="Deslogar()" href="Tela_de_Login.html">Deslogar</a>'
 }
 
@@ -98,4 +99,8 @@ function salvarPonto(tag){
         localStorage.setItem(`HistoricoTags`, JSON.stringify(listaHistorico))
         
     }
+  }
+
+  function IrParaCadastroSeguranca(){
+    window.location.href = "Tela_de_cadastro_de_segurança.html";
   }

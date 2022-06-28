@@ -30,7 +30,6 @@ function Login(){
         }
         else
         {
-           alert('aqui');
            alert("Usuário ou senha não encontrado!")
         }
     

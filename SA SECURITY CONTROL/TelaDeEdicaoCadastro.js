@@ -59,5 +59,6 @@ function Deslogar(){
     usuarioAtual = null;
     localStorage.setItem(`UsuarioAtual`, JSON.stringify(usuarioAtual))
     alert("Deslogando...")
+    window.location.href = "Tela_de_Login.html";
 
 }

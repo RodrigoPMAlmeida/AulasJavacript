@@ -12,30 +12,34 @@
 
 <div id="container">
 
-        <div id="header">
-            
-        <a onclick="Deslogar()" href="Tela_de_Login.html">Deslogar </a>
-        
 
+        <div id="header">
+
+            <div id="headerEsquerda">
+            <label id='usuarioAtual'></label>
+
+            <a onclick="Deslogar()" id="submenu">Sair</a>
+            </div>
+                    
         </div>
        
    
 
 
     <div id="middle">
-
         
 
         <div id="titulo">
-            Página principal
+            MENU
         </div>
-        <div id="tag"><strong> Aqui</strong></div><br>
+        <div id="tag"><strong></strong></div><br>
         <center>
-        <div id="submenu">
-            <a onclick="Deslogar()" href="Tela_de_Login.html" id="gridItem">Sair</a>
-            <a href="Tela_de_cadastro_de_segurança.html" id="gridItem">Cadastrar novo segurança</a>
-            <a href="Tela_De_Listar_Segurancas.html" id="gridItem">Listar Seguranças</a>
-            <a href="Tela_De_Alterar_Cadastro.html" id="gridItem">Alterar Cadastro</a>
+        <div id="submenuLista">
+            
+            <a onclick="IrParaCadastroSeguranca()"" id="gridItem">Cadastrar novo segurança</a>
+            <a id="gridItem">Listar Seguranças</a>
+            <a id="gridItem">Alterar Cadastro</a>
+            <a id="gridItem">Desempenho</a>
         </div>
         </center>
         </div>

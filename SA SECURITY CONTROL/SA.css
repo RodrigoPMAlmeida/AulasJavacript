@@ -23,13 +23,12 @@ body{
     margin: 0;
     height: 100%;
     
-
 }
 
 #container{
 
     align-items: center;
-    color: dimgray;
+    color: black;
     height: 100%;
 
 }
@@ -42,7 +41,13 @@ body{
     background-color: black;
     display: flex;
     justify-content: space-between;
+    color: white;
     
+}
+
+#headerEsquerda{
+    display: flex;
+    flex-direction: column;
 }
 
 #cimaMiddle{
@@ -81,16 +86,9 @@ body{
     background-color: red;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-    
 }
 
-#footer{
 
-    margin: auto;
-    height: 25%;
-    background-color: red;
-
-}
 .buttons{
 
     background-color: azure;
@@ -135,18 +133,63 @@ h1{
 }
 
 #submenu{
+    display: flex-start;
+    width: 20px;
+    color: white;
+    font-family: letras;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+#submenuItem{
+
+}
+
+#submenu:hover{
+    color:red;
+}
+
+
+#submenuLista{
     display: grid;
-    grid-template-columns: 1fr 1fr1fr; 
-    
+    grid-template-columns: 1fr 1fr ; 
     font-family: letras;
     font-size: 20px;
+    background-color: white;
+    width: 40%;
+    
+    
+}
+
+#gridItem{
+    margin-bottom: 25px;
+    border-color: black;
+    border-style: groove;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: red;
+    margin: 20px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+#gridItem:hover{
+
+    background-color: black;
+    color: white;
+    
 
 }
 
 #titulo{
 
     margin: auto;
-    font-size: 30px;
+    font-size: 55px;
     display: flex;
     justify-content: center;
 }
@@ -278,12 +321,12 @@ button{
 #menuHeader{
 
     color: red;
-    text-decoration: underline;
     cursor: pointer;
     font-family: 'letras';
     flex-direction: column;
     justify-content: flex-end;
     height: 25%;
+    font-size: 30px;
 
 }
 
