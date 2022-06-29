@@ -1,5 +1,6 @@
 let cadastroUsuario = [] 
 let Conta = {}
+const url = "http://192.168.43.15"
 
 function Login(){
 
@@ -49,7 +50,7 @@ setInterval(function ( ) {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {	
         //caso receba alguma informação 
-        if(this.responseText){
+        if(this.responseText ){
         //document.getElementById("tag").innerHTML = this.responseText;
         salvarPonto(this.responseText)
         }

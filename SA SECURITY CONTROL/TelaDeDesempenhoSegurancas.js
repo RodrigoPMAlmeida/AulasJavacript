@@ -7,6 +7,8 @@ var cpfs = ""
 var segurancaAtual
 var idSeguranca
 var listaHistorico = []
+const url = "http://192.168.43.15"
+var historicoSeguranca
 
 function MostrarSegurancaAtual(){
     segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
@@ -58,10 +60,25 @@ function ListarSeguranca(){
 function MostrarHistorico(){
 
     listaHistorico = JSON.parse(localStorage.getItem('HistoricoTags'))
+    segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
 
-    
-    document.getElementById('historico').innerHTML = "Data: "+ listaHistorico.dia + "/"+ listaHistorico.mes + "/"+listaHistorico.ano + "<br>" + "Horário: "+listaHistorico.hora  + ":"+listaHistorico.dia + "<br><br>"
+    if(listaHistorico == null){
+        document.getElementById('historico').innerHTML = "Nenhum ponto encontrado"
+    }
+    else{
 
+        for(var i=0; i<listaHistorico.length; i++){
+        
+            if(listaHistorico[i].tag == segurancaAtual.tag){
+                historicoSeguranca += "Data: "+ listaHistorico.dia + "/"+ listaHistorico.mes + "/"+listaHistorico.ano + "<br>" + "Horário: "+listaHistorico.hora  + ":"+listaHistorico.dia + "<br><br>"
+            }  
+        }
+            if(historicoSeguranca == ""){
+                document.getElementById('historico').innerHTML = "Nenhum ponto encontrado"
+            }else{
+                document.getElementById('historico').innerHTML = historicoSeguranca
+            }
+    }
 }
 
 function Deslogar(){

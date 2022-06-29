@@ -5,6 +5,7 @@ let listaSeguranca = []
 var posicaoAtual
 var segurancaAtual
 var lista = ""
+const url = "http://192.168.43.15"
 
 
 function MostrarUsuarioAtual(){

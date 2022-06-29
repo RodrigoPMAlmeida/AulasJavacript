@@ -1,5 +1,6 @@
 let cadastroUsuario = [] 
 let Conta = {}
+const url = "http://192.168.43.15"
 
 function Cadastro(){
 
