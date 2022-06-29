@@ -78,3 +78,17 @@ function VoltarIndex(){
     window.location.href = "index.html";
 }
 
+setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {	
+        //caso receba alguma informação 
+        if(this.responseText != ""){
+            document.getElementById("tagSeguranca").innerHTML = this.responseText;
+            
+        }
+      }
+    };
+    xhttp.open("GET", url+"/rfid", true);    
+    xhttp.send();
+  }, 3000 ) ;
