@@ -8,7 +8,7 @@ var segurancaAtual
 var idSeguranca
 var listaHistorico = []
 const url = "http://192.168.43.15"
-var historicoSeguranca
+var historicoSeguranca = ""
 
 function MostrarSegurancaAtual(){
     segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
@@ -61,6 +61,7 @@ function MostrarHistorico(){
 
     listaHistorico = JSON.parse(localStorage.getItem('HistoricoTags'))
     segurancaAtual = JSON.parse(localStorage.getItem('SegurancaAtual'))
+    historicoSeguranca = ""
 
     if(listaHistorico == null){
         document.getElementById('historico').innerHTML = "Nenhum ponto encontrado"
@@ -69,8 +70,9 @@ function MostrarHistorico(){
 
         for(var i=0; i<listaHistorico.length; i++){
         
-            if(listaHistorico[i].tag == segurancaAtual.tag){
-                historicoSeguranca += "Data: "+ listaHistorico.dia + "/"+ listaHistorico.mes + "/"+listaHistorico.ano + "<br>" + "Horário: "+listaHistorico.hora  + ":"+listaHistorico.dia + "<br><br>"
+            if(listaHistorico[i].tagID == segurancaAtual.tag){
+            
+                historicoSeguranca += "Data: "+ listaHistorico[i].dia + "/"+ listaHistorico[i].mes + "/"+listaHistorico[i].ano + "<br>" + "Horário: "+listaHistorico[i].hora  + ":"+listaHistorico[i].minuto + "<br><br>"
             }  
         }
             if(historicoSeguranca == ""){
@@ -94,51 +96,68 @@ function VoltarIndex(){
     window.location.href = "index.html";
 }
 
+setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {	
+        //caso receba alguma informação 
+        if(this.responseText){
+        //document.getElementById("tag").innerHTML = this.responseText;
+        salvarPonto(this.responseText)
+        window.location.href = "Tela_De_Desempenho_Segurancas.html";
+        }
+      }
+    };
+    xhttp.open("GET", url+"/rfid", true);    
+    xhttp.send();
+  }, 3000 ) ;
+
+
 function salvarPonto(tag){
 
-    alert("Tag passada")
-  
-      listaHistorico = JSON.parse(localStorage.getItem('HistoricoTags'))
-      var dataAtual = new Date();
-      var dia = dataAtual.getDate();
-      var mes = (dataAtual.getMonth() + 1);
-      var ano = dataAtual.getFullYear();
-      var horas = dataAtual.getHours();
-      var minutos = dataAtual.getMinutes();
-      // saída: Hoje é dia 15/7 de 2020. Agora são 14:59h.
-       
-      if(listaHistorico == null){
-  
-          listaHistorico = []
-          historico = {
-  
-              tagID: tag,
-              ano: ano,
-              mes: mes,
-              dia: dia,
-              hora: horas,
-              minuto: minutos,
-              
-          }       
-              listaHistorico.push(historico)
-              localStorage.setItem(`HistoricoTags`, JSON.stringify(listaHistorico))
-      }
-  
-      else{
-          
+  alert("Tag passada")
+
+    listaHistorico = JSON.parse(localStorage.getItem('HistoricoTags'))
+    var dataAtual = new Date();
+    var dia = dataAtual.getDate();
+    var mes = (dataAtual.getMonth() + 1);
+    var ano = dataAtual.getFullYear();
+    var horas = dataAtual.getHours();
+    var minutos = dataAtual.getMinutes();
+    // saída: Hoje é dia 15/7 de 2020. Agora são 14:59h.
+     
+    if(listaHistorico == null){
+
+        listaHistorico = []
         historico = {
-  
-              tagID: tag,
-              ano: ano,
-              mes: mes,
-              dia: dia,
-              hora: horas,
-              minuto: minutos,
-          
-        }
-                 
-          listaHistorico.push(historico)
-          localStorage.setItem(`HistoricoTags`, JSON.stringify(listaHistorico))
-          
-      }
+
+            tagID: tag,
+            ano: ano,
+            mes: mes,
+            dia: dia,
+            hora: horas,
+            minuto: minutos,
+            
+        }       
+            listaHistorico.push(historico)
+            localStorage.setItem(`HistoricoTags`, JSON.stringify(listaHistorico))
     }
+
+    else{
+        
+      historico = {
+
+            tagID: tag,
+            ano: ano,
+            mes: mes,
+            dia: dia,
+            hora: horas,
+            minuto: minutos,
+        
+      }
+        
+        listaHistorico.push(historico)
+        localStorage.setItem(`HistoricoTags`, JSON.stringify(listaHistorico))
+
+    }
+  }

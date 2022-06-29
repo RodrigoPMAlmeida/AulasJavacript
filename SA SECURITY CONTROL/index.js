@@ -4,6 +4,7 @@ let Seguranca = {}
 let listaSeguranca = []
 const url = "http://192.168.43.15"
 var historico = {}
+var listaHistorico = []
 
 
 function Deslogar(){
@@ -90,10 +91,10 @@ function salvarPonto(tag){
             minuto: minutos,
         
       }
-               
+        
         listaHistorico.push(historico)
         localStorage.setItem(`HistoricoTags`, JSON.stringify(listaHistorico))
-        
+
     }
   }
 

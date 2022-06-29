@@ -2,6 +2,7 @@ let cadastroUsuario = []
 let Conta = {}
 let Seguranca = {}
 let listaSeguranca = []
+const url = "http://192.168.43.15"
 
 
 function MostrarUsuarioAtual(){
@@ -82,10 +83,10 @@ setInterval(function ( ) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {	
+          var NumTag = this.responseText
         //caso receba alguma informação 
         if(this.responseText != ""){
-            document.getElementById("tagSeguranca").innerHTML = this.responseText;
-            
+            document.getElementById("tagSeguranca").value = NumTag;    
         }
       }
     };
