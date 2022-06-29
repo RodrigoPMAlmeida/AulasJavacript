@@ -207,6 +207,7 @@ h1{
     color: blue;
     text-decoration: underline;
     cursor: pointer;
+    margin-top: 10px;
     
 }
 
@@ -234,6 +235,7 @@ h1{
     color: blue;
     text-decoration: underline;
     cursor: pointer;
+    margin-top: 10px;
     
 }
 
@@ -274,6 +276,10 @@ h1{
 }
     
 #seguranca{
+    background-color: white;
+}
+
+#historico{
     background-color: white;
 }
 

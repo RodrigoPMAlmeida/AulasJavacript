@@ -49,7 +49,7 @@ function cadastrarSeguranca(){
             telefone: document.getElementById("telefone").value,
             nascimento: document.getElementById("nascimento").value,
             endereco: document.getElementById("endereco").value,
-
+            tag: document.getElementById("tagSeguranca").value
         }
 
         if(Seguranca.nome != "" && Seguranca.cpf != "" && Seguranca.telefone!= "" && Seguranca.nascimento != "" && Seguranca.endereco != "" ){   

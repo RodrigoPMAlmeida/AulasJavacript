@@ -38,7 +38,7 @@ setInterval(function ( ) {
       if (this.readyState == 4 && this.status == 200) {	
         //caso receba alguma informação 
         if(this.responseText){
-        document.getElementById("tag").innerHTML = this.responseText;
+        //document.getElementById("tag").innerHTML = this.responseText;
         salvarPonto(this.responseText)
         }
       }
@@ -73,15 +73,11 @@ function salvarPonto(tag){
             hora: horas,
             minuto: minutos,
             
-        }
-                   
+        }       
             listaHistorico.push(historico)
             localStorage.setItem(`HistoricoTags`, JSON.stringify(listaHistorico))
-            
     }
 
-    
-    
     else{
         
       historico = {

@@ -103,6 +103,7 @@ function EditarSeguranca(){
             listaSeguranca[posicaoAtual].telefone = document.getElementById("telefone").value
             listaSeguranca[posicaoAtual].endereco = document.getElementById("endereco").value
             listaSeguranca[posicaoAtual].nascimento = document.getElementById("nascimento").value
+            listaSeguranca[posicaoAtual].tag = document.getElementById("tagSeguranca").value
     
             localStorage.setItem(`Segurancas`, JSON.stringify(listaSeguranca))
             SalvarSegurancaAtual(posicaoAtual)
